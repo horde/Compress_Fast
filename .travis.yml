@@ -23,6 +23,6 @@ before_script:
   - yes no | pecl install channel://pecl.php.net/lzf
   - pecl install channel://pear.horde.org/horde_lz4
   - pear install channel://pear.horde.org/Horde_Test
-  - pear install package.xml
+  - pear install -a -B package.xml
 script:
   - php $(find test -name AllTests.php)
