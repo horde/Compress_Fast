@@ -1,0 +1,46 @@
+----------
+v1.1.2-git
+----------
+
+
+------
+v1.1.1
+------
+
+[jan] Mark PHP 7 as supported.
+
+
+------
+v1.1.0
+------
+
+[mms] Add zlib driver and allow it to be considered a 'fast' compression driver
+      (disabled by default).
+
+
+------
+v1.0.3
+------
+
+[mms] Relax overly strict string type checking when compressing/decompressing.
+
+
+------
+v1.0.2
+------
+
+[mms] Silence decompression warnings.
+
+
+------
+v1.0.1
+------
+
+[mms] Add horde_lz4 compression driver.
+
+
+------
+v1.0.0
+------
+
+[mms] Initial release of package.
