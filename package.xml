@@ -64,7 +64,6 @@
        <file name="AllTests.php" role="test" />
        <file name="bootstrap.php" role="test" />
        <file name="CompressFastTest.php" role="test" />
-       <file name="phpunit.xml" role="test" />
       </dir> <!-- /test/Horde/Compress/Fast -->
      </dir> <!-- /test/Horde/Compress -->
     </dir> <!-- /test/Horde -->
@@ -129,7 +128,6 @@
    <install as="Horde/Compress/Fast/AllTests.php" name="test/Horde/Compress/Fast/AllTests.php" />
    <install as="Horde/Compress/Fast/bootstrap.php" name="test/Horde/Compress/Fast/bootstrap.php" />
    <install as="Horde/Compress/Fast/CompressFastTest.php" name="test/Horde/Compress/Fast/CompressFastTest.php" />
-   <install as="Horde/Compress/Fast/phpunit.xml" name="test/Horde/Compress/Fast/phpunit.xml" />
    <install as="Horde/Compress/Fast/Driver/Lz4Test.php" name="test/Horde/Compress/Fast/Driver/Lz4Test.php" />
    <install as="Horde/Compress/Fast/Driver/LzfTest.php" name="test/Horde/Compress/Fast/Driver/LzfTest.php" />
    <install as="Horde/Compress/Fast/Driver/NullTest.php" name="test/Horde/Compress/Fast/Driver/NullTest.php" />
