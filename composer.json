@@ -33,9 +33,6 @@
     "autoload": {
         "psr-0": {
             "Horde_Compress_Fast": "lib/"
-        },
-        "psr-4": {
-            "Horde\\Compress\\Fast\\": "src/"
         }
     }
 }
