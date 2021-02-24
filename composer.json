@@ -21,14 +21,14 @@
     ],
     "require": {
         "horde/horde-installer-plugin": "*",
-        "php": "^5.3 || ^7",
-        "horde/exception": "^2"
+        "php": "^7",
+        "horde/exception": "^3"
     },
     "suggest": {
-        "horde/test": "^2.1",
-        "ext-horde_lz4": "*",
-        "ext-lzf": "^1.5.2",
-        "ext-zlib": "*"
+        "horde/test": "^3",
+        "ext-zlib": "*",
+        "ext-lzf": "*",
+        "ext-horde_lz4": "*"
     },
     "autoload": {
         "psr-0": {
