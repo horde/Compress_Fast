@@ -4,14 +4,14 @@
  * @package    Compress_Fast
  * @subpackage UnitTests
  */
+namespace Horde\Compress\Fast\Driver;
 
 /**
  * @category   Horde
  * @package    Compress_Fast
  * @subpackage UnitTests
  */
-class Horde_Compress_Fast_Driver_Lz4Test
-extends Horde_Compress_Fast_Driver_TestBase
+class Lz4Test extends TestBase
 {
     protected $classname = 'Horde_Compress_Fast_Lz4';
 }
