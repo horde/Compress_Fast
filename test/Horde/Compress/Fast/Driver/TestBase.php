@@ -5,7 +5,7 @@
  * @subpackage UnitTests
  */
 namespace Horde\Compress\Fast\Driver;
-use Horde_Test_Case;
+use Horde_Test_Case as TestCase;
 use \Horde_Compress_Fast;
 use \stdClass;
 
@@ -14,7 +14,7 @@ use \stdClass;
  * @package    Compress_Fast
  * @subpackage UnitTests
  */
-class TestBase extends Horde_Test_Case
+class TestBase extends TestCase
 {
     protected $classname;
 
