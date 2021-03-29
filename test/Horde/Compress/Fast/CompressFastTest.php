@@ -4,13 +4,17 @@
  * @package    Compress_Fast
  * @subpackage UnitTests
  */
+namespace Horde\Compress\Fast;
+use Horde_Test_Case;
+use \stdClass;
+use \Horde_Compress_Fast;
 
 /**
  * @category   Horde
  * @package    Compress_Fast
  * @subpackage UnitTests
  */
-class Horde_Compress_Fast_CompressFastTest extends Horde_Test_Case
+class CompressFastTest extends Horde_Test_Case
 {
     /**
      * @dataProvider providerTestStringInput
@@ -23,15 +27,13 @@ class Horde_Compress_Fast_CompressFastTest extends Horde_Test_Case
             )
         ));
 
-        try {
-            $ob->compress($data);
-            if (!$success) {
-                $this->fail('Expected exception.');
-            }
-        } catch (Horde_Compress_Fast_Exception $e) {
-            if ($success) {
-                $this->fail('Unexpected exception.');
-            }
+        $this->expectException('Horde_Compress_Fast_Exception');
+        $ob->compress($data);
+        if (!$success) {
+            $this->expectException('Horde_Compress_Fast_Exception');
+        }
+        if ($success) {
+            $this->markTestIncomplete();
         }
     }
 
