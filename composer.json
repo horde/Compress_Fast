@@ -1,5 +1,4 @@
 {
-    "minimum-stability": "dev",
     "name": "horde/compress_fast",
     "description": "Fast compression library",
     "type": "library",
@@ -12,7 +11,7 @@
             "role": "lead"
         }
     ],
-    "time": "2021-03-13",
+    "time": "2021-11-06",
     "repositories": [
         {
             "type": "composer",
@@ -20,11 +19,13 @@
         }
     ],
     "require": {
-        "php": "^7",
-        "horde/exception": "^3 || dev-FRAMEWORK_6_0"
+        "php": "^7.4 || ^8",
+        "horde/exception": "^3"
+    },
+    "require-dev": {
+        "horde/test": "^3"
     },
     "suggest": {
-        "horde/test": "^3 || dev-FRAMEWORK_6_0",
         "ext-zlib": "*",
         "ext-lzf": "*",
         "ext-horde_lz4": "*"
@@ -32,6 +33,14 @@
     "autoload": {
         "psr-0": {
             "Horde_Compress_Fast": "lib/"
+        },
+        "psr-4": {
+            "Horde\\Compress\\Fast\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Horde\\Compress\\Fast\\Test\\": "test/"
         }
     }
 }

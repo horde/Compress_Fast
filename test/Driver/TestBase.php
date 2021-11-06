@@ -4,10 +4,12 @@
  * @package    Compress_Fast
  * @subpackage UnitTests
  */
-namespace Horde\Compress\Fast\Driver;
-use Horde_Test_Case as TestCase;
-use \Horde_Compress_Fast;
+namespace Horde\Compress\Fast\Test\Driver;
+use Horde\Test\TestCase;
+use \Horde\Compress\Fast\CompressFast;
+use Horde\Compress\Fast\CompressFastException;
 use \stdClass;
+use TypeError;
 
 /**
  * @category   Horde
@@ -23,13 +25,13 @@ class TestBase extends TestCase
 
     protected function setUp(): void
     {
-        if (!call_user_func(array($this->classname, 'supported'))) {
+        if (!$this->classname::supported()) {
             $this->markTestSkipped(
                 sprintf('Driver %s is not available.', $this->classname)
             );
         }
 
-        $this->ob = new Horde_Compress_Fast(array(
+        $this->ob = new CompressFast(array(
             'drivers' => array($this->classname)
         ));
     }
@@ -46,21 +48,15 @@ class TestBase extends TestCase
         );
     }
 
-    /**
-     * @expectedException Horde_Compress_Fast_Exception
-     */
     public function testBadCompress()
     {
-        $this->expectException('Horde_Compress_Fast_Exception');
+        $this->expectException(TypeError::class);
         $this->ob->compress(array());
     }
 
-    /**
-     * @expectedException Horde_Compress_Fast_Exception
-     */
     public function testBadDecompress()
     {
-        $this->expectException('Horde_Compress_Fast_Exception');
+        $this->expectException(TypeError::class);
         $this->ob->decompress(new stdClass);
     }
 
