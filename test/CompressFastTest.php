@@ -4,34 +4,36 @@
  * @package    Compress_Fast
  * @subpackage UnitTests
  */
-namespace Horde\Compress\Fast;
-use Horde_Test_Case;
+namespace Horde\Compress\Fast\Test;
+use Horde\Test\TestCase;
 use \stdClass;
-use \Horde_Compress_Fast;
-
+use \Horde\Compress\Fast\CompressFast;
+use \Horde\Compress\Fast\NullDriver;
+use \Horde\Compress\Fast\CompressFastException;
+use \TypeError;
 /**
  * @category   Horde
  * @package    Compress_Fast
  * @subpackage UnitTests
  */
-class CompressFastTest extends Horde_Test_Case
+class CompressFastTest extends TestCase
 {
     /**
      * @dataProvider providerTestStringInput
      */
     public function testStringInput($data, $success)
     {
-        $ob = new Horde_Compress_Fast(array(
+        $ob = new CompressFast(array(
             'drivers' => array(
-                'Horde_Compress_Fast_Null'
+                NullDriver::class
             )
         ));
 
-        $this->expectException('Horde_Compress_Fast_Exception');
-        $ob->compress($data);
+//        $this->expectException(CompressFastException::class);
         if (!$success) {
-            $this->expectException('Horde_Compress_Fast_Exception');
+            $this->expectException(TypeError::class);
         }
+        $ob->compress($data);
         if ($success) {
             $this->markTestIncomplete();
         }
@@ -45,7 +47,7 @@ class CompressFastTest extends Horde_Test_Case
             array(0.1, true),
             array(1, true),
             array(true, true),
-            array(null, true),
+            array(null, false),
             array(array(), false),
             array(new stdClass, false),
             array(opendir(__DIR__), false)

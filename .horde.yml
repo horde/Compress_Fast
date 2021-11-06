@@ -26,13 +26,14 @@ license:
   uri: http://www.horde.org/licenses/lgpl21
 dependencies:
   required:
-    php: ^7
+    php: ^7.4 || ^8
     composer:
       horde/exception: ^3
   optional:
-    composer:
-      horde/test: ^3
     ext:
       zlib: '*'
       lzf: '*'
       horde_lz4: '*'
+  dev:
+    composer:
+      horde/test: ^3
