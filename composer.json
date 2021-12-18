@@ -4,7 +4,7 @@
     "description": "Fast compression library",
     "type": "library",
     "homepage": "https://www.horde.org",
-    "license": "LGPL-2.1",
+    "license": "LGPL-2.1-only",
     "authors": [
         {
             "name": "Michael Slusarz",
