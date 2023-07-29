@@ -17,6 +17,7 @@ class Horde_Compress_Fast_CompressFastTest extends Horde_Test_Case
      */
     public function testStringInput($data, $success)
     {
+        $this->expectNotToPerformAssertions();
         $ob = new Horde_Compress_Fast(array(
             'drivers' => array(
                 'Horde_Compress_Fast_Null'

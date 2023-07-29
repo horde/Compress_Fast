@@ -17,7 +17,7 @@ class Horde_Compress_Fast_Driver_TestBase extends Horde_Test_Case
     private $compress_text = 'Foo Foo Foo Foo Foo Foo Foo Foo Foo Foo';
     private $ob;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         if (!call_user_func(array($this->classname, 'supported'))) {
             $this->markTestSkipped(
@@ -42,19 +42,15 @@ class Horde_Compress_Fast_Driver_TestBase extends Horde_Test_Case
         );
     }
 
-    /**
-     * @expectedException Horde_Compress_Fast_Exception
-     */
     public function testBadCompress()
     {
+        $this->expectException('Horde_Compress_Fast_Exception');
         $this->ob->compress(array());
     }
 
-    /**
-     * @expectedException Horde_Compress_Fast_Exception
-     */
     public function testBadDecompress()
     {
+        $this->expectException('Horde_Compress_Fast_Exception');
         $this->ob->decompress(new stdClass);
     }
 
