@@ -14,24 +14,18 @@
     "version": "1.1.2",
     "time": "2017-11-11",
     "repositories": [
-        {
-            "type": "pear",
-            "url": "https://pear.horde.org"
-        }
     ],
     "require": {
         "php": "^5.3 || ^7",
-        "pear-pear.horde.org/Horde_Exception": "^2"
+        "horde/exception": "^2"
     },
     "suggest": {
-        "pear-pear.horde.org/Horde_Test": "^2.1",
-        "pear-pear.horde.org/horde_lz4": "*",
-        "pear-pecl.php.net/lzf": "^1.5.2",
+        "horde/test": "^2.1",
+        "horde/lz4": "*",
+        "ext-lzf": "^1.5.2",
         "ext-zlib": "*"
     },
     "replace": {
-        "pear-pear.horde.org/Horde_Compress_Fast": "1.*",
-        "pear-horde/Horde_Compress_Fast": "1.*"
     },
     "autoload": {
         "psr-0": {
