@@ -1,6 +1,7 @@
 <?php
+
 /**
- * Copyright 2013-2017 Horde LLC (http://www.horde.org/)
+ * Copyright 2013-2026 Horde LLC (http://www.horde.org/)
  *
  * See the enclosed file LICENSE for license information (LGPL). If you
  * did not receive this file, see http://www.horde.org/licenses/lgpl21.
@@ -44,23 +45,23 @@ class Horde_Compress_Fast
      *
      * @throws Horde_Compress_Fast_Exception
      */
-    public function __construct(array $opts = array())
+    public function __construct(array $opts = [])
     {
         if (empty($opts['drivers'])) {
-            $opts['drivers'] = array(
+            $opts['drivers'] = [
                 'Horde_Compress_Fast_Lz4',
                 'Horde_Compress_Fast_Lzf',
-                'Horde_Compress_Fast_Null'
-            );
+                'Horde_Compress_Fast_Null',
+            ];
             if (!empty($opts['zlib'])) {
                 array_unshift($opts['drivers'], 'Horde_Compress_Fast_Zlib');
             }
         }
 
         foreach ($opts['drivers'] as $val) {
-            if (($ob = new $val()) &&
-                ($ob instanceof Horde_Compress_Fast_Base) &&
-                $val::supported()) {
+            if (($ob = new $val())
+                && ($ob instanceof Horde_Compress_Fast_Base)
+                && $val::supported()) {
                 $this->_compress = $ob;
                 break;
             }
@@ -76,8 +77,8 @@ class Horde_Compress_Fast
     public function __get($name)
     {
         switch ($name) {
-        case 'driver':
-            return get_class($this->_compress);
+            case 'driver':
+                return get_class($this->_compress);
         }
     }
 

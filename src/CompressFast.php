@@ -1,6 +1,7 @@
 <?php
+
 /**
- * Copyright 2013-2017 Horde LLC (http://www.horde.org/)
+ * Copyright 2013-2026 Horde LLC (http://www.horde.org/)
  *
  * See the enclosed file LICENSE for license information (LGPL). If you
  * did not receive this file, see http://www.horde.org/licenses/lgpl21.
@@ -60,9 +61,9 @@ class CompressFast
         }
 
         foreach ($opts['drivers'] as $val) {
-            if (($ob = new $val()) &&
-                ($ob instanceof CompressFastDriver) &&
-                $val::supported()) {
+            if (($ob = new $val())
+                && ($ob instanceof CompressFastDriver)
+                && $val::supported()) {
                 $this->compress = $ob;
                 break;
             }
@@ -78,8 +79,8 @@ class CompressFast
     public function __get($name)
     {
         switch ($name) {
-        case 'driver':
-            return get_class($this->compress);
+            case 'driver':
+                return get_class($this->compress);
         }
     }
 

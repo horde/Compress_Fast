@@ -1,6 +1,7 @@
 <?php
+
 /**
- * Copyright 2013-2017 Horde LLC (http://www.horde.org/)
+ * Copyright 2013-2026 Horde LLC (http://www.horde.org/)
  *
  * See the enclosed file LICENSE for license information (LGPL). If you
  * did not receive this file, see http://www.horde.org/licenses/lgpl21.
@@ -24,6 +25,4 @@ use Horde\Exception\Wrapped;
  * @license   http://www.horde.org/licenses/lgpl21 LGPL 2.1
  * @package   Compress_Fast
  */
-class CompressFastException extends Wrapped
-{
-}
+class CompressFastException extends Wrapped {}

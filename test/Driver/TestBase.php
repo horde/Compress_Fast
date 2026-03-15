@@ -1,20 +1,24 @@
 <?php
+
 /**
  * @category   Horde
  * @package    Compress_Fast
  * @subpackage UnitTests
  */
+
 namespace Horde\Compress\Fast\Test\Driver;
+
 use Horde\Test\TestCase;
-use \Horde\Compress\Fast\CompressFast;
+use Horde\Compress\Fast\CompressFast;
 use Horde\Compress\Fast\CompressFastException;
-use \stdClass;
+use stdClass;
 use TypeError;
 
 /**
  * @category   Horde
  * @package    Compress_Fast
  * @subpackage UnitTests
+ * @coversNothing
  */
 class TestBase extends TestCase
 {
@@ -31,9 +35,9 @@ class TestBase extends TestCase
             );
         }
 
-        $this->ob = new CompressFast(array(
-            'drivers' => array($this->classname)
-        ));
+        $this->ob = new CompressFast([
+            'drivers' => [$this->classname],
+        ]);
     }
 
     public function testCompress()
@@ -51,13 +55,13 @@ class TestBase extends TestCase
     public function testBadCompress()
     {
         $this->expectException(TypeError::class);
-        $this->ob->compress(array());
+        $this->ob->compress([]);
     }
 
     public function testBadDecompress()
     {
         $this->expectException(TypeError::class);
-        $this->ob->decompress(new stdClass);
+        $this->ob->decompress(new stdClass());
     }
 
 }
