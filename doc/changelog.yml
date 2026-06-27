@@ -1,54 +1,14 @@
 ---
-2.0.0alpha5:
-  api: 2.0.0alpha1
-  state:
-    release: alpha
-    api: alpha
-  date: 2021-03-13
-  license:
-    identifier: LGPL-2.1
-    uri: http://www.horde.org/licenses/lgpl21
-  notes: |+
-2.0.0alpha4:
-  api: 2.0.0alpha1
-  state:
-    release: alpha
-    api: alpha
-  date: 2021-03-13
-  license:
-    identifier: LGPL-2.1
-    uri: http://www.horde.org/licenses/lgpl21
-  notes: |+
-2.0.0alpha3:
-  api: 2.0.0alpha1
-  state:
-    release: alpha
-    api: alpha
-  date: 2021-03-13
-  license:
-    identifier: LGPL-2.1
-    uri: http://www.horde.org/licenses/lgpl21
-  notes: |+
-2.0.0alpha2:
-  api: 2.0.0alpha1
-  state:
-    release: alpha
-    api: alpha
-  date: 2021-02-24
-  license:
-    identifier: LGPL-2.1
-    uri: http://www.horde.org/licenses/lgpl21
-  notes: |+
-2.0.0alpha1:
-  api: 2.0.0alpha1
+2.0.0:
+  api: 2.0.0
   state:
     release: stable
     api: stable
-  date: 2021-02-24
+  date: 2026-06-27
   license:
-    identifier: LGPL-2.1
-    uri: http://www.horde.org/licenses/lgpl21
-  notes: ~
+    identifier: LGPL-2.1-only
+    uri: https://spdx.org/licenses/LGPL-2.1-only.html
+  notes: "chore: refresh qc fixes and platform deps\nchore: Update workflow dependency"
 2.0.0-beta1:
   api: 2.0.0-beta1
   state:
@@ -58,16 +18,57 @@
   license:
     identifier: LGPL-2.1-only
     uri: https://spdx.org/licenses/LGPL-2.1-only.html
-  notes: |-
-    style(php-cs-fixer): Apply Horde 6 coding standard
-    Update metadata and workflows for PHP 8 support
-    Development mode for Compress_Fast-2.0.0alpha5
-    Released Compress_Fast-2.0.0alpha4
-    Add CI job for satis repo update
-    Update bootstrap.php
-    no errors, added ci.yml and adapted bootstrap.php
-    no errors left
-    Development mode for Compress_Fast-2.0.0alpha5
+  notes: "style(php-cs-fixer): Apply Horde 6 coding standard\nUpdate metadata and workflows for PHP 8 support\nDevelopment mode for Compress_Fast-2.0.0alpha5\nReleased Compress_Fast-2.0.0alpha4\nAdd CI job for satis repo update\nUpdate bootstrap.php\nno errors, added ci.yml and adapted bootstrap.php\nno errors left\nDevelopment mode for Compress_Fast-2.0.0alpha5"
+2.0.0alpha5:
+  api: 2.0.0alpha1
+  state:
+    release: alpha
+    api: alpha
+  date: 2021-03-13
+  license:
+    identifier: LGPL-2.1
+    uri: http://www.horde.org/licenses/lgpl21
+  notes: ''
+2.0.0alpha4:
+  api: 2.0.0alpha1
+  state:
+    release: alpha
+    api: alpha
+  date: 2021-03-13
+  license:
+    identifier: LGPL-2.1
+    uri: http://www.horde.org/licenses/lgpl21
+  notes: ''
+2.0.0alpha3:
+  api: 2.0.0alpha1
+  state:
+    release: alpha
+    api: alpha
+  date: 2021-03-13
+  license:
+    identifier: LGPL-2.1
+    uri: http://www.horde.org/licenses/lgpl21
+  notes: ''
+2.0.0alpha2:
+  api: 2.0.0alpha1
+  state:
+    release: alpha
+    api: alpha
+  date: 2021-02-24
+  license:
+    identifier: LGPL-2.1
+    uri: http://www.horde.org/licenses/lgpl21
+  notes: ''
+2.0.0alpha1:
+  api: 2.0.0alpha1
+  state:
+    release: stable
+    api: stable
+  date: 2021-02-24
+  license:
+    identifier: LGPL-2.1
+    uri: http://www.horde.org/licenses/lgpl21
+  notes: null
 1.1.1:
   api: 1.1.0
   state:
@@ -77,8 +78,7 @@
   license:
     identifier: LGPL-2.1
     uri: http://www.horde.org/licenses/lgpl21
-  notes: |
-    [jan] Mark PHP 7 as supported.
+  notes: "[jan] Mark PHP 7 as supported.\n"
 1.1.0:
   api: 1.1.0
   state:
@@ -88,8 +88,7 @@
   license:
     identifier: LGPL-2.1
     uri: http://www.horde.org/licenses/lgpl21
-  notes: |
-    [mms] Add zlib driver and allow it to be considered a 'fast' compression driver (disabled by default).
+  notes: "[mms] Add zlib driver and allow it to be considered a 'fast' compression driver (disabled by default).\n"
 1.0.3:
   api: 1.0.0
   state:
@@ -99,8 +98,7 @@
   license:
     identifier: LGPL-2.1
     uri: http://www.horde.org/licenses/lgpl21
-  notes: |
-    [mms] Relax overly strict string type checking when compressing/decompressing.
+  notes: "[mms] Relax overly strict string type checking when compressing/decompressing.\n"
 1.0.2:
   api: 1.0.0
   state:
@@ -110,8 +108,7 @@
   license:
     identifier: LGPL-2.1
     uri: http://www.horde.org/licenses/lgpl21
-  notes: |
-    [mms] Silence decompression warnings.
+  notes: "[mms] Silence decompression warnings.\n"
 1.0.1:
   api: 1.0.0
   state:
@@ -121,8 +118,7 @@
   license:
     identifier: LGPL-2.1
     uri: http://www.horde.org/licenses/lgpl21
-  notes: |
-    [mms] Add horde_lz4 compression driver.
+  notes: "[mms] Add horde_lz4 compression driver.\n"
 1.0.0:
   api: 1.0.0
   state:
@@ -132,5 +128,4 @@
   license:
     identifier: LGPL-2.1
     uri: http://www.horde.org/licenses/lgpl21
-  notes: |
-    [mms] Initial release of package.
+  notes: "[mms] Initial release of package.\n"
